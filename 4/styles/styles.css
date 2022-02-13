@@ -18,6 +18,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #333333;
   background-color: #FFFFFF;
   }
 
@@ -84,6 +85,10 @@ background-repeat: no-repeat;
   text-transform: uppercase;
 }
 
+.advantages-title-black {
+  color: #000000;
+}
+
 .search-hotel-title {
   color: #000000;
   font-weight: 700;
@@ -96,7 +101,7 @@ background-repeat: no-repeat;
   color: #333333;
   font-weight: 400;
   font-size: 22px;
-  line-height: 36px;
+  line-height: 26px;
 }
 
 .search-hotel {
@@ -134,7 +139,7 @@ text-align: center;
 text-transform: uppercase;
 }
 
-.catalog-filter {
+.hotels-filter {
   background-image: url("../images/catalog-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -171,12 +176,15 @@ text-transform: uppercase;
   text-transform: uppercase;
 }
 
-.hotel-card-link {
-  text-decoration: none;
+.hotel-card-title {
   color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+}
+
+.hotel-card-link {
+  text-decoration: none;
 }
 
 .hotel-card-type {
@@ -200,6 +208,7 @@ text-transform: uppercase;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  background-color: #F2F2F2;
 }
 
 .pagination-link {
@@ -233,4 +242,75 @@ text-transform: uppercase;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
+
+.want-here {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #756257;
+  text-decoration: none;
+}
+
+.button-search {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+}
+
+.button-subscribe {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.button-blue {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.button-green {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+}
+
+.button-brown {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-decoration: none;
+}
+
+.breadcrumbs-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
 }
