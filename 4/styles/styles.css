@@ -267,6 +267,7 @@ text-transform: uppercase;
 }
 
 .button-subscribe {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -277,6 +278,7 @@ text-transform: uppercase;
 }
 
 .button-blue {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -287,6 +289,7 @@ text-transform: uppercase;
 }
 
 .button-green {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -305,6 +308,15 @@ text-transform: uppercase;
   color: #FFFFFF;
   background-color: #756257;
   text-decoration: none;
+}
+
+.button-reset {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .breadcrumbs-link {
