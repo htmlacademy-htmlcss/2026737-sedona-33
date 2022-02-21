@@ -25,7 +25,7 @@
             <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
-        <ul class="Navigation-user">
+        <ul class="navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -98,10 +98,12 @@
                 </label>
               </li>
             </ul>
-            <!--Стоимость жилья-->
+          </fieldset>
+          <!--Стоимость жилья-->
+          <div class="catalog-filter-buttons">
             <button class="button-blue" type="submit">Применить</button>
             <button class="button-reset" type="reset">Сбросить</button>
-          </fieldset>
+          </div>
         </form>
       </section>
       <section class="hotels">
@@ -111,9 +113,10 @@
             <option value="cheap">Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a class="button-icon button-tile button-tile-current">Показать карточки</a>
-          <a href="#" class="button-icon button-slideshow">Слайдшоу</a>
-          <a href="#" class="button-icon button-list">Список</a>
+          <a class="button-icon button-tile button-tile-current"><span class="visually-hidden">Показать
+              карточки</span></a>
+          <a href="#" class="button-icon button-slideshow"><span class="visually-hidden">Слайдшоу</span></a>
+          <a href="#" class="button-icon button-list"><span class="visually-hidden">Список</span></a>
         </div>
         <ul class="hotel-list">
           <li class="hotel-card">
@@ -166,36 +169,37 @@
           </li>
         </ul>
         <button class="button-blue pagination-show-more" type="button">Загрузить ещё</button>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-        </ul>
-        <label for="hotels-qt">Гостиниц на странице:</label>
-        <select class="select-control" id="hotels-qt" aria-label="Гостиниц на странице">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4" selected>4</option>
-        </select>
+        <div class="pagination-container">
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
+          <div class="pagination-select">
+            <label for="hotels-qt">Гостиниц на странице:</label>
+            <select class="select-control" id="hotels-qt" aria-label="Гостиниц на странице">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+            </select>
+          </div>
+        </div>
       </section>
       <section class="subscribe-inner">
         <h2 class="inner-subscribe-title">Подпишитесь на рассылку</h2>
