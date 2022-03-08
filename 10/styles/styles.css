@@ -23,7 +23,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #E5E5E5;
+  background-color: #F2F2F2;
   margin: 0;
   min-width: 1280px;
  }
@@ -637,43 +637,46 @@ body {
   height: 47px;
   width: 145px;
   border: 2px solid #FFFFFF;
-  font-size: inherit;
+  font: inherit;
+  line-height: 21px;
   color: #FFFFFF;
   outline: none;
 }
 
 .input-min {
   width: 145px;
-  background-image: url("../images/min-price.svg");
-  background-repeat: no-repeat;
-  background-position: 111px 18px;
   border-radius: 4px 0 0 4px;
-  margin-right: -5px;
-  border-right: 1px solid #FFFFFF;
+  margin-right: -7px;
+  border-right: 2px solid #FFFFFF;
   padding-top: 1px;
   padding-left: 18px;
 }
 
 .input-max {
-  width: 142px;
-  background-image: url("../images/max-price.svg");
-  background-repeat: no-repeat;
-  background-position: 105px 18px;
+  width: 144px;
   border-radius: 0 4px 4px 0;
-  border-left: 1px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
   padding-left: 15px;
+}
+
+.range-input-label {
+  font: inherit;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  transform: translate(110px, 11px);
 }
 
 .range-input:hover {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-.input-min:hover + .input-max {
-  border-left: 1px solid rgba(255, 255, 255, 0.6);
+.range-inputs:hover .input-min{
+border-right: 2px solid rgba(255, 255, 255, 0);
 }
 
-.input-max:hover  .input-min {
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
+.range-inputs:hover .input-max {
+  border-left: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .range-input:focus {
@@ -684,7 +687,6 @@ body {
 .range-input:active {
   background-color: #756257;
   box-shadow: none;
-
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -730,8 +732,9 @@ input[type="number"] {
 }
 
 .select-control {
+  font-family: inherit;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 23px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
@@ -777,6 +780,7 @@ input[type="number"] {
   margin-right: 8px;
   padding: 17px 16px;
   border: 2px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .button-icon:first-child {
@@ -1037,7 +1041,7 @@ input[type="number"] {
 
 .navigation-item .button-brown {
   padding: 6px 32px 5px 32px;
-  margin: 0 -1px 0 19px;
+  margin: 0 0 0 19px;
   border-radius: 4px;
 }
 
@@ -1185,6 +1189,7 @@ input[type="number"] {
   height: 8px;
   position: absolute;
   transform: translate(-7px, 8px);
+  -moz-transform: translate(30px, -14px);
 }
 
 .breadcrumbs-item:last-child::after {
@@ -1287,6 +1292,7 @@ input[type="number"] {
   bottom: -21px;
 }
 
+/* модальное окно */
 .modal-container {
   position: fixed;
   left: 0;
@@ -1298,7 +1304,6 @@ input[type="number"] {
   z-index: 2;
 }
 
-/* модальное окно */
 .modal-container-close {
   display: none;
 }
@@ -1371,23 +1376,14 @@ background-color: #E6E6E6;
   margin-bottom: 3px;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-input[type="date"] {
-  background-image: url("../images/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 387px;
-}
-
 .date-error {
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
   color: #FF5757;
   position: absolute;
-  transform: translate(157px, -11px);
+  right: 140px;
+  bottom: -30px;
   display: none;
 }
 
@@ -1397,14 +1393,33 @@ input[type="date"] {
   line-height: 40px;
   color: #333333;
   position: absolute;
-  transform: translate(157px, -11px);
-  display: block;
+  right: 90px;
+  bottom: -30px;
+  display: none;
+}
+
+.date-icon {
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  border: none;
+  position: absolute;
+  top: 19px;
+  right: 19px;
+
 }
 
 .search-date-in,
 .search-date-out {
   width: 401px;
   padding-left: 19px;
+  color: #000000;
+}
+
+.search-date-in::placeholder,
+.search-date-out::placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .search-date-in {
@@ -1415,15 +1430,23 @@ input[type="date"] {
   margin-left: 45px;
 }
 
-.search-date-in:active,
-.search-date-out:active {
-   background-color: #E6E6E6;
+.search-date-in:hover,
+.search-date-out:hover {
+  background-color: #E6E6E6;
 }
 
 .search-date-in:focus,
 .search-date-out:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
+}
+
+.search-date-in:active,
+.search-date-out:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  color: #000000;
 }
 
 .search-date-in:invalid .date-error,
