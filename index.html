@@ -174,6 +174,7 @@
         <p class="subscribe-description">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscribe-field" placeholder="Ваш e-mail" type="email" name="subscribe-email" required>
+          <!-- для невалиного значения класс .subscribe-field-invalid -->
           <button class="button-blue button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
@@ -251,7 +252,7 @@
               <label class="date-true date-in-true" id="date-in-true" for="date-in" aria-hidden="true">На эти даты есть
                 свободные
                 номера. Пока есть.</label>
-              <input class="search-form-field search-date-in" type="text" id="date-in" name="date-in"
+              <input class="search-form-date search-date-in" type="text" id="date-in" name="date-in"
                 aria-describedby="date-in-true" placeholder="Укажите дату">
               <button class="date-icon" type="button">
                 <span class="visually-hidden">Календарь</span>
@@ -265,7 +266,7 @@
               <label class="date-true date-out-true" id="date-out-true" for="date-out" aria-hidden="true">На эти даты
                 есть свободные
                 номера. Пока есть.</label>
-              <input class="search-form-field search-date-out" type="text" id="date-out" name="date-out"
+              <input class="search-form-date search-date-out" type="text" id="date-out" name="date-out"
                 aria-describedby="date-out-true" placeholder="Укажите дату">
               <button class="date-icon" type="button">
                 <span class="visually-hidden">Календарь</span>
@@ -280,7 +281,7 @@
                   <path d="M0 0v1h13V0H0Z"/>
                 </svg>
               </button>
-              <input class="search-form-field search-adults" type="number" value="2" id="adults" name="adults">
+              <input class="search-form-people search-adults" type="number" value="2" id="adults" name="adults">
               <button class="number-plus" type="button">
                 <span class="visually-hidden">плюс</span>
                 <svg class="icon-plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
@@ -319,7 +320,7 @@
                   <path d="M0 0v1h13V0H0Z" />
                 </svg>
               </button>
-              <input class="search-form-field search-children" type="number" value="1" id="children" name="children">
+              <input class="search-form-people search-children" type="number" value="1" id="children" name="children">
               <button class="number-plus" type="button">
                 <span class="visually-hidden">плюс</span>
                 <svg class="icon-plus" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13"
