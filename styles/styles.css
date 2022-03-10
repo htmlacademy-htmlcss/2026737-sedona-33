@@ -1323,8 +1323,6 @@ input[type="number"] {
 .welcome-mask {
   position: relative;
   bottom: -21px;
-  /* left: 50%;
-  transform: translateX(-50%); */
 }
 
 /* модальное окно */
