@@ -142,6 +142,7 @@ body {
   border-radius: 50%;
   padding: 0.5em  0;
   min-width: 2em;
+  max-width: 300px;
   min-height: 1em;
   position: absolute;
   transform: translate(-6px, -7px);
@@ -196,7 +197,6 @@ body {
 }
 
 .advantages-photo {
-  width: auto;
   height: auto;
   object-fit: cover;
 }
@@ -240,6 +240,24 @@ body {
 .advantages-list-sub li {
   box-sizing: border-box;
   padding: 184px 50px 71px;
+}
+
+.advantages-list-sub li:nth-child(1) {
+  background-image: url("../images/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: center 89px;
+}
+
+.advantages-list-sub li:nth-child(2) {
+  background-image: url("../images/icon-food.svg");
+  background-repeat: no-repeat;
+  background-position: center 90px;
+}
+
+.advantages-list-sub li:nth-child(3) {
+  background-image: url("../images/icon-souvenir.svg");
+  background-repeat: no-repeat;
+  background-position: center 85px;
 }
 
 .advantages-item-white {
@@ -325,7 +343,7 @@ body {
 .search-hotel {
   text-align: center;
   padding: 92px 50px 93px;
-  }
+}
 
 .subscribe-index {
   background-color: #83b3d3;
@@ -515,6 +533,7 @@ body {
   border: none;
   margin: 0;
   padding: 0;
+  width: 150px;
 }
 
 /* фильтры каталога */
@@ -638,7 +657,7 @@ body {
 }
 
 .range-inputs {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   position: relative;
   margin-top: 4px;
 }
@@ -678,6 +697,8 @@ body {
   color: rgb(255 255 255 /  30%);
   position: absolute;
   transform: translate(110px, 11px);
+  max-width: 30px;
+  word-break: break-word;
 }
 
 .range-input:hover {
@@ -922,16 +943,28 @@ input[type="number"] {
   align-items: center;
 }
 
-.star {
+.stars-2::after {
+  content: "";
+  width: 43px;
+  height: 20px;
   background-image: url("../images/star-1.svg");
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
-  margin-right: 7px;
+  background-repeat: space;
 }
 
-.star:last-child {
-  margin-right: 0;
+.stars-3::after {
+  content: "";
+  width: 68px;
+  height: 20px;
+  background-image: url("../images/star-1.svg");
+  background-repeat: space;
+}
+
+.stars-4::after {
+  content: "";
+  width: 90px;
+  height: 20px;
+  background-image: url("../images/star-1.svg");
+  background-repeat: space;
 }
 
 .rating {
@@ -997,11 +1030,10 @@ input[type="number"] {
 
 .search-form .button-blue {
   width: 575px;
-  height: 60px;
   font-size: 20px;
   line-height: 40px;
   border-radius: 10px;
-  margin-top: 23px;
+  margin: 0;
   padding: 11px 10px 9px;
 }
 
@@ -1084,7 +1116,7 @@ input[type="number"] {
 }
 
 .navigation-item .button-brown {
-  padding: 6px 32px 4px 31px;
+  padding: 6px 31px 4px 31px;
   margin: 0 0 5px 19px;
   border-radius: 4px;
   display: inline-block;
@@ -1201,8 +1233,8 @@ input[type="number"] {
   position: relative;
 }
 
-.breadcrumbs-item::after {
-  -moz-transform: translate(30px, -14px);
+.breadcrumbs-item::before {
+
   content: "";
   background-image: url("../images/breadcrumbs-arrow.svg");
   background-repeat: no-repeat;
@@ -1212,7 +1244,7 @@ input[type="number"] {
   transform: translate(-7px, 8px);
 }
 
-.breadcrumbs-item:last-child::after {
+.breadcrumbs-item:first-child::before {
   content: none;
 }
 
@@ -1342,7 +1374,7 @@ input[type="number"] {
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgb(0 0 0 / 15%);
   border-radius: 30px;
-  padding: 60px 70px 68px;
+  padding: 60px 70px 70px;
 }
 
 .modal-search {
@@ -1385,13 +1417,34 @@ input[type="number"] {
   line-height: 40px;
   color: #000000;
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 43px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-right: 60px;
 }
 
 .search-form-label {
+  position: relative;
+}
+
+.search-form-date-label {
   font-weight: 700;
   line-height: 40px;
+  max-width: 140px;
+}
+
+.search-form-adults-label {
+  font-weight: 700;
+  line-height: 40px;
+  max-width: 130px;
+  word-break: break-word;
+}
+
+.search-form-children-label {
+  font-weight: 700;
+  line-height: 40px;
+  width: 75px;
+  text-indent: 31px;
+  word-break: break-word;
 }
 
 .search-form-people {
@@ -1404,6 +1457,8 @@ input[type="number"] {
   height: 50px;
   padding: 0;
   margin-bottom: 3px;
+  width: 133px;
+  text-align: center;
 }
 
 .search-form-date {
@@ -1414,7 +1469,7 @@ input[type="number"] {
   outline: 2px solid #000000;
   outline-offset: -2px;
   border-radius: 4px;
-  width: 418px;
+  width: 420px;
   height: 50px;
   padding-left: 19px;
   margin-bottom: 3px;
@@ -1441,6 +1496,7 @@ input[type="number"] {
   outline: 3px solid #83b3d3;
 }
 
+/*стили для сообщений под инпутом*/
 .date-error {
   font-weight: 400;
   font-size: 16px;
@@ -1488,36 +1544,39 @@ input[type="number"] {
   right: 19px;
 }
 
-.search-date-in {
-  margin-left: 51px;
-}
-
-.search-date-out {
-  margin-left: 47px;
-}
-
-.search-children,
-.search-adults {
-  width: 133px;
-  text-align: center;
-}
-
-.search-adults {
-  margin: 0 52px 0 69px;
-}
-
-.search-children {
-  margin-left: 47px;
-}
-
-.field-group {
+.field-group-date {
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 37px;
+}
+
+.field-group-people {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.field-group-adults {
+  display: flex;
+  justify-content: space-between;
+  width: 288px;
+  margin: 0;
+  align-items: baseline;
+}
+
+.field-group-children {
+  display: flex;
+  justify-content: flex-end;
+  width: 260px;
+  margin: 0;
+  align-items: baseline;
 }
 
 .number-minus {
   position: absolute;
-  transform: translate(82px, 13px);
+  transform: translate(167px, 14px);
   width: 25px;
   height: 25px;
   background-color: transparent;
@@ -1532,7 +1591,7 @@ input[type="number"] {
 
 .number-plus {
   position: absolute;
-  transform: translate(-90px, 13px);
+  transform: translate(246px, 13px);
   width: 25px;
   height: 25px;
   border-radius: 4px;
@@ -1543,11 +1602,11 @@ input[type="number"] {
 }
 
 .field-group-children .number-minus {
-  transform: translate(62px, 12px);
+  transform: translate(-97px, 14px);
 }
 
 .field-group-children .number-plus {
-  transform: translate(-39px, 12px);
+  transform: translate(-18px, 13px);
 }
 
 .icon-plus {
@@ -1581,9 +1640,9 @@ input[type="number"] {
 }
 
 .tooltip {
-  position: absolute;
-  margin-left: 5px;
-  margin-top: 7px;
+  position: relative;
+  margin-left: 11px;
+  margin-right: 18px;
 }
 
 .tooltip-toggle {
@@ -1614,6 +1673,7 @@ input[type="number"] {
   left: 50%;
   transform: translateX(-50%);
   display: none;
+  top: 29px;
 }
 
 .tooltip-text::after {
@@ -1632,3 +1692,4 @@ input[type="number"] {
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
+
