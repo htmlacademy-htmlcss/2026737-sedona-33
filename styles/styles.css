@@ -243,19 +243,19 @@ body {
   padding: 184px 50px 71px;
 }
 
-.advantages-list-sub li:nth-child(1) {
+.advantages-house {
   background-image: url("../images/icon-house.svg");
   background-repeat: no-repeat;
   background-position: center 89px;
 }
 
-.advantages-list-sub li:nth-child(2) {
+.advantages-food {
   background-image: url("../images/icon-food.svg");
   background-repeat: no-repeat;
   background-position: center 90px;
 }
 
-.advantages-list-sub li:nth-child(3) {
+.advantages-souvenir {
   background-image: url("../images/icon-souvenir.svg");
   background-repeat: no-repeat;
   background-position: center 85px;
