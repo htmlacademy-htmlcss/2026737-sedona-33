@@ -225,6 +225,7 @@ body {
 
 .advantages-list-sub {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
   list-style-type: none;
 }
@@ -277,6 +278,7 @@ body {
 
 .advantages-item-2 {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
 }
 
@@ -1443,7 +1445,7 @@ input[type="number"] {
   font-weight: 700;
   line-height: 40px;
   width: 75px;
-  text-indent: 31px;
+  text-indent: 28px;
   word-break: break-word;
 }
 
@@ -1455,7 +1457,8 @@ input[type="number"] {
   border-radius: 4px;
   border: none;
   height: 50px;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 0 40px;
   margin-bottom: 3px;
   width: 133px;
   text-align: center;
@@ -1472,6 +1475,7 @@ input[type="number"] {
   width: 420px;
   height: 50px;
   padding-left: 19px;
+  padding-right: 45px;
   margin-bottom: 3px;
   color: #000000;
   box-sizing: border-box;
@@ -1555,7 +1559,7 @@ input[type="number"] {
 .field-group-people {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 37px;
 }
 
 .field-group-adults {
@@ -1586,12 +1590,12 @@ input[type="number"] {
 }
 
 .icon-minus {
-  transform: translate(-2px, -4px);
+  transform: translate(-3px, -4px);
 }
 
 .number-plus {
   position: absolute;
-  transform: translate(246px, 13px);
+  transform: translate(250px, 12px);
   width: 25px;
   height: 25px;
   border-radius: 4px;
@@ -1602,15 +1606,15 @@ input[type="number"] {
 }
 
 .field-group-children .number-minus {
-  transform: translate(-97px, 14px);
+  transform: translate(-97px, 12px);
 }
 
 .field-group-children .number-plus {
-  transform: translate(-18px, 13px);
+  transform: translate(-14px, 12px);
 }
 
 .icon-plus {
-  transform: translate(1px, -1px);
+  transform: translate(-3px, 0px);
 }
 
 .icon-plus,
@@ -1641,7 +1645,7 @@ input[type="number"] {
 
 .tooltip {
   position: relative;
-  margin-left: 11px;
+  margin-left: 8px;
   margin-right: 18px;
 }
 
